@@ -14,6 +14,7 @@ module ActiveRecord
             cumulative = cumulative == true ? cart_item.quantity : 0
             cart_item.quantity = (cumulative + opts[:quantity])
             cart_item.save
+            cart_item
           end
         end
 
