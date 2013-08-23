@@ -7,7 +7,7 @@ module ActiveRecord
         #
         def add(object, opts={})
           cart_item = item_for(object)
-          opts[:item] = opts
+          opts[:item] = object
           unless cart_item
             shopping_cart_items.create(opts)
           else
