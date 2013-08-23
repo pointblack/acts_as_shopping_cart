@@ -5,7 +5,7 @@ module ActiveRecord
         #
         # Adds a product to the cart
         #
-        def add(object, opts={})
+        def add(object, opts)
           cart_item = item_for(object)
 
           unless cart_item
