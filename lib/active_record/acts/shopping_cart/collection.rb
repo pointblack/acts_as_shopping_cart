@@ -12,7 +12,7 @@ module ActiveRecord
             shopping_cart_items.create(opts)
           else
             cumulative = cumulative == true ? cart_item.quantity : 0
-            cart_item.quantity = (cumulative + quantity)
+            cart_item.quantity = (cumulative + opts[:quantity])
             cart_item.save
           end
         end
